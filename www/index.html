@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript">
+
+      
+  
+
+    function handleOrientation(event) {
+  var absolute = event.absolute;
+  var alpha    = event.alpha;
+  var beta     = event.beta;
+  var gamma    = event.gamma;
+document.getElementById("output1").innerHTML="beta :"+beta;
+document.getElementById("output2").innerHTML="gamma:"+gamma;
+document.getElementById("output3").innerHTML="absolute:"+absolute;
+document.getElementById("output4").innerHTML="alpha:"+alpha;
+
+}
+
+  window.addEventListener("deviceorientation", handleOrientation, true);
+
+    </script>
+
+  </head>
+  <body style="background-color: blue;">
+    <h1 style="font-family: 'Times New Roman', Times, serif ;">Tilt your phone to get different accelerometer values</h1>
+
+    <div style="margin-top: 55%;margin-left: 15%; background-color: yellow; width:200px;  ">
+    <span id="output1"></span><br>
+    <span id="output2"></span><br>
+    <span id="output3"></span><br>
+    <span id="output4"></span>
+      </div>
+  </body>
+</html>
